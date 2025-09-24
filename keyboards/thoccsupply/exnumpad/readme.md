@@ -5,8 +5,8 @@
 *A short description of the keyboard/project*
 
 * Keyboard Maintainer: [THOCC SUPPLY](https://github.com/thoccsupply)
-* Hardware Supported: *The PCBs, controllers supported*
-* Hardware Availability: *Links to where you can find this hardware*
+* Hardware Supported: RP2040
+* Hardware Availability: https://www.raspberrypi.com/products/rp2040/
 
 Make example for this keyboard (after setting up your build environment):
 
