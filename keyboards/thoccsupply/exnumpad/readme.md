@@ -1,8 +1,8 @@
 # thoccsupply/exnumpad
 
-![thoccsupply/exnumpad](imgur.com image replace me!)
+![thoccsupply/exnumpad](TBA)
 
-*A short description of the keyboard/project*
+*An exploded numpad with extra enter key for thumb use and encoder*
 
 * Keyboard Maintainer: [THOCC SUPPLY](https://github.com/thoccsupply)
 * Hardware Supported: RP2040
