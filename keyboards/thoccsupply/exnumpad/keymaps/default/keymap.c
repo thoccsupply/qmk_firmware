@@ -1,3 +1,4 @@
+// Copyright 2025 THOCC SUPPLY (@thoccsupply)
 /* SPDX-License-Identifier: GPL-2.0-or-later */
 
 #include QMK_KEYBOARD_H
@@ -71,8 +72,6 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  };
 // clang-format on
 
-/* `ENCODER_MAP_ENABLE = yes` must be added to the rules.mk at the KEYMAP level. See QMK docs. */
-/* Remove the following code if you do not enable it in your keymap (e.g. default keymap). */
 #if defined(ENCODER_MAP_ENABLE)
 const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][2] = {
 	[0] = { ENCODER_CCW_CW(KC_VOLU, KC_VOLD) },

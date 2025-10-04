@@ -1,3 +1,4 @@
+// Copyright 2025 THOCC SUPPLY (@thoccsupply)
 /* SPDX-License-Identifier: GPL-2.0-or-later */
 
 #pragma once

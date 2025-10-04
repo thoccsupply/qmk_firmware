@@ -18,7 +18,6 @@
         "mousekey": false,
         "nkro": true,
         "rgb_matrix": true
-        //"rgblight": false
     },
 
     "diode_direction": "COL2ROW",
