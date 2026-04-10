@@ -15,21 +15,24 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     * |-------+------+------+------+------| PLUS |------|
     * | HOME  | END  |  4   |  5   |  6   |      | DEL  |
     * |-------+------+------+------+------|------|------|
-    * | PGUP  |      |  1   |  2   |  3   |      |COPY  |
+    * | PGUP  |      |  1   |  2   |  3   |      |Caps  |
     * |-------+ ENT  +------+------+------| ENT  |------|
-    * | PGDN  |      |      0      |  .   |      |PASTE |
+    * | PGDN  |      |      0      |  .   |      |MO(1) |
     * `-------------------------------------------------'
     *
     * Layer 1
     * ,-------------------------------------------------.
-    * |       |      |QK_   |      |      |      |      |
-    * |       |      |Boot  |      |      |      |      |
+    * |       |      |QK_   |RM_   |RM_   |RM_   |      |
+    * |       |      |Boot  |HUEU  |HUED  |TOGG  |      |
     * |-------+------+------+------+------|------|------|
-    * |       |      |      |      |      |      |      |
+    * |       |      |      |RM_   |RM_   |      |      |
+    * |       |      |      |VALU  |VALD  |      |      |
     * |----ENCODER---+------+------+------|------|------|
-    * |     (Mute)   |      |      |      |      |      |
+    * |     (Mute)   |      |RM_   |RM_   |      |RM_   |
+    * |              |      |SPDU  |SPDD  |      |PREV  |
     * |-------+------+------+------+------|      |------|
-    * |       |      |      |      |      |      |      |
+    * |       |      |      |RM_   |RM_   |      |RM_   |
+    * |       |      |      |STAU  |STAD  |      |NEXT  |
     * |-------+------+------+------+------|------|------|
     * |       |      |      |      |      |      |      |
     * |-------+      +------+------+------|      |------|
@@ -42,14 +45,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                     KC_NUM,  KC_PSLS, KC_PAST, KC_PMNS,
        KC_MUTE,     KC_P7,   KC_P8,   KC_P9,   KC_PPLS,   KC_INS,
   KC_HOME, KC_END,  KC_P4,   KC_P5,   KC_P6,              KC_DEL,
-  KC_PGUP, KC_PENT, KC_P1,   KC_P2,   KC_P3,   KC_PENT,   KC_COPY,
-  KC_PGDN,                   KC_P0,        KC_PDOT,           KC_PAST
+  KC_PGUP, KC_PENT, KC_P1,   KC_P2,   KC_P3,   KC_PENT,   KC_CAPS,
+  KC_PGDN,                   KC_P0,        KC_PDOT,       MO(1)
  ),
  [1] = LAYOUT_default(
-                        QK_BOOT, _______, _______, _______,
-                        _______, _______, _______, _______,
-       KC_MUTE,         _______, _______, _______, _______, _______,
-  _______, _______,     _______, _______, _______,          _______,
+                        QK_BOOT, RM_HUEU, RM_HUED, RM_TOGG,
+                        _______, RM_VALU, RM_VALD, _______,
+       KC_MUTE,         _______, RM_SPDU, RM_SPDD, _______, RM_PREV,
+  _______, _______,     _______, RM_SATU, RM_SATD,          RM_NEXT,
   _______, _______,     _______, _______, _______, _______, _______,
   _______,                  _______,      _______,          _______
     ),
@@ -73,10 +76,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 // clang-format on
 
 #if defined(ENCODER_MAP_ENABLE)
-const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][2] = {
-	[0] = { ENCODER_CCW_CW(KC_VOLU, KC_VOLD) },
-	[1] = { ENCODER_CCW_CW(KC_PGUP, KC_PGDN) },
+const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][NUM_DIRECTIONS] = {
+	[0] = { ENCODER_CCW_CW(KC_VOLD, KC_VOLU) },
+	[1] = { ENCODER_CCW_CW(KC_PGDN, KC_PGUP) },
 	[2] = { ENCODER_CCW_CW(KC_TRNS, KC_TRNS) },
-	[3] = { ENCODER_CCW_CW(KC_TRNS, KC_TRNS) },
+	[3] = { ENCODER_CCW_CW(KC_TRNS, KC_TRNS) }
 };
 #endif
